@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 5px;
+  padding: 20px;
+}
+
+body, html {
+  margin: 0;     /* Elimina los márgenes predeterminados */
+  padding: 0;    /* Elimina el padding predeterminado */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #6b6332;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: relative; /* Necesario para posicionar el botón */
+}
+
+/* Estilos del botón de Login */
+.login-button {
+  position: absolute; /* Posiciona el botón de forma absoluta */
+  top: 10px; /* Distancia desde la parte superior */
+  left: 10px; /* Distancia desde la izquierda */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.login-button:hover {
+  background-color: #555; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos del contenido principal */
+main {
+  padding: 5%;
+  margin-bottom: 2%; /* Margen inferior para el footer */
+}
+
+/* Contenedor de las bebidas */
+#platos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 10px; /* Espacio entre las bebidas */
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilos de cada bebida */
+.plato {
+  background-color:transparent;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  text-align: center;
+}
+
+.plato-imagen {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajusta automáticamente */
+  border-radius: 1px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+.plato h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+.plato h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.plato p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Estilos del botón de eliminar */
+.plato button {
+  background-color: #ff4d4d; /* Color rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Espacio entre el texto y el botón */
+}
+
+.plato button:hover {
+  background-color: #cc0000; /* Color rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #platos-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Menos columnas en pantallas pequeñas */
+  }
+
+  .plato h3 {
+    font-size: 1.3em; /* Tamaño de fuente más pequeño */
+  }
+
+  .plato p {
+    font-size: 1em; /* Tamaño de fuente más pequeño */
+  }
+
+  .login-button {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    padding: 8px 16px; /* Padding más pequeño */
+  }
+}
+
+@media (max-width: 480px) {
+  #platos-container {
+    grid-template-columns: repeat(2, 1fr); /* Asegura que haya 2 columnas en pantallas pequeñas */
+  }
+
+  .plato h3 {
+    font-size: 1.2em; /* Tamaño de fuente más pequeño */
+  }
+
+  .plato p {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+  }
+
+  .login-button {
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+    padding: 6px 12px; /* Padding más pequeño */
+  }
+}
+
+
+/* Estilos para el botón de agregar */
+.add-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745; /* Color verde */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Hace el botón circular */
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+}

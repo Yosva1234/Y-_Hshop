@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Producto</title>
+  <link rel="stylesheet" href="stylesformulario.css"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+  <form id="uploadForm">
+    <h1>Subir Producto</h1>
+
+    <!-- Campos del formulario -->
+    <div class="form-group">
+      <label for="nombre">Nombre del producto:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" step="0.01" required>
+    </div>
+
+    <div class="form-group">
+      <label for="informacion">Información:</label>
+      <textarea id="info" name="info" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="imageInput" class="custom-file-upload">
+        Seleccionar imagen
+      </label>
+      <input type="file" id="imageInput" accept="image/*" required>
+    </div>
+
+    <button type="submit">Subir producto</button>
+    <p id="message"></p>
+  </form>
+
+  <!-- Página de carga (spinner) -->
+  <div id="loading" style="display: none;">
+    <p>Cargando, por favor espera...</p>
+    <div class="spinner"></div>
+  </div>
+
+  <script src="scriptformulario.js"></script> <!-- Enlaza el archivo JavaScript -->
+</body>
+</html>
