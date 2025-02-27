@@ -49,7 +49,7 @@ app.post('/bebidas', (req, res) => {
   const { nombre, preciocup, preciomlc, preciousd, info, imagen } = req.body; // Obtener los datos del cuerpo de la solicitud
 
   // Validar que todos los campos estén presentes
-  if (!nombre || !preciousd || !preciomlc || !preciocup || !info || !file) {
+  if (!nombre || !preciousd || !preciomlc || !preciocup || !info ) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
   }
 
