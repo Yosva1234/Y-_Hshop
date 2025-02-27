@@ -21,10 +21,16 @@ body, html {
 
 header {
   background-color: #6b6332;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 15px;
   text-align: center;
   position: relative; /* Necesario para posicionar el botón */
+}
+.header-content {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  gap: 0px; /* Espacio entre la imagen y el título */
 }
 
 /* Estilos del botón de Login */
@@ -39,6 +45,12 @@ header {
   border-radius: 5px;
   font-size: 1em;
   transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.logo {
+  width: 15%; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción */
+
 }
 
 .login-button:hover {
