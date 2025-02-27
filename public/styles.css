@@ -155,6 +155,10 @@ footer {
   #platos-container {
     grid-template-columns: repeat(2, 1fr); /* Asegura que haya 2 columnas en pantallas pequeñas */
   }
+  .logo
+  {
+    width: 45%; /* Ajusta el tamaño de la imagen */
+  }
 
   .plato h3 {
     font-size: 1.2em; /* Tamaño de fuente más pequeño */
