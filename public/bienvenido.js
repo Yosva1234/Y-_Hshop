@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const platoElement = document.createElement('div');
             platoElement.classList.add('plato');
             platoElement.innerHTML = `
-              <h3>${bebida.nombre} - $${bebida.precio.toFixed(2)}</h3>
+              <h3>${bebida.nombre}</h3>
               <button onclick="eliminarBebida(${bebida.id})">Eliminar</button>
             `;
             platosContainer.appendChild(platoElement);

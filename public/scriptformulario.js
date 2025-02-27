@@ -5,12 +5,14 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   document.getElementById('loading').style.display = 'block';
 
   const nombre = document.getElementById('nombre').value;
-  const precio = document.getElementById('precio').value;
+  const preciocup = document.getElementById('preciocup').value;
+  const preciomlc = document.getElementById('preciomlc').value;
+  const preciousd = document.getElementById('preciousd').value;
   const info = document.getElementById('info').value;
   const fileInput = document.getElementById('imageInput');
   const file = fileInput.files[0];
 
-  if (!nombre || !precio || !info || !file) {
+  if (!nombre || !preciousd || !preciomlc || !preciocup || !info || !file) {
       alert('Por favor, completa todos los campos.');
       document.getElementById('loading').style.display = 'none'; // Ocultar spinner si hay error
       return;
@@ -36,7 +38,9 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
       // Enviar los datos del producto al backend
       const producto = {
           nombre,
-          precio: parseFloat(precio),
+          preciocup: parseFloat(precio),
+          preciomlc: parseFloat(precio),
+          preciousd: parseFloat(precio),
           info,
           imagen: imageUrl,
       };
