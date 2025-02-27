@@ -53,7 +53,7 @@ app.post('/bebidas', (req, res) => {
     return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
   }
 
-  const query = 'INSERT INTO bebidas (nombre, precio, info, imagen) VALUES (?, ?, ?, ?)'; // Consulta para insertar una nueva bebida
+  const query = 'INSERT INTO bebidas (nombre, preciocup, preciomlc, preciousd, info, imagen) VALUES (?, ? , ? , ? , ?, ?)'; // Consulta para insertar una nueva bebida
 
   // Usar el pool para ejecutar la consulta
   pool.query(query, [nombre, preciocup, preciomlc, preciousd, info, imagen], (err, results) => {
