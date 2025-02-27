@@ -11,6 +11,11 @@ body, html {
   padding: 0;    /* Elimina el padding predeterminado */
   box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
 }
+/* Elimina márgenes y rellenos predeterminados */
+body, header {
+  margin: 0;
+  padding: 0;
+}
 
 * {
   margin: 0;
@@ -39,8 +44,8 @@ header {
   top: 10px; /* Distancia desde la parte superior */
   left: 10px; /* Distancia desde la izquierda */
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  background-color: #000000;
+  color: rgb(220, 82, 192);
   text-decoration: none;
   border-radius: 5px;
   font-size: 1em;
@@ -103,6 +108,21 @@ main {
   font-size: 1.2em;
   color: #555;
 }
+
+/* Estilos para la sección de información */
+#about {
+  padding: 20px;
+  text-align: center;
+  background-color:transparent; /* Fondo claro */
+  margin-top: 20px; /* Espacio después de los productos */
+
+}
+
+#about p {
+  color: #555; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
 
 /* Estilos del botón de eliminar */
 .plato button {
