@@ -53,10 +53,10 @@ app.post('/bebidas', (req, res) => {
     return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
   }
 
-  const query = 'INSERT INTO bebidas (nombre, preciocup, preciomlc, preciousd, info, imagen, tipo) VALUES (?, ? , ? , ? , ?, ?)'; // Consulta para insertar una nueva bebida
+  const query = 'INSERT INTO bebidas (nombre, preciocup, preciomlc, preciousd, info, imagen, tipo) VALUES (?, ? , ? , ? , ?, ?,?)'; // Consulta para insertar una nueva bebida
 
   // Usar el pool para ejecutar la consulta
-  pool.query(query, [nombre, preciocup, preciomlc, preciousd, info, imagen, varcategoria], (err, results) => {
+  pool.query(query, [nombre, preciocup, preciomlc, preciousd, info, imagen, tipo], (err, results) => {
     if (err) {
       console.error('Error al agregar la bebida:', err.stack);
       return res.status(500).json({ error: 'Error en el servidor' });
