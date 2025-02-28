@@ -25,8 +25,9 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   if (categoria.value == 'hombre') varcategoria = 'h';
   if (categoria.value == 'mujer') varcategoria = 'm';
   if (categoria.value == 'niñ@') varcategoria = 'n';
-  if (categoria.value == 'variado') varcategoria = 'v';
+  if (categoria.value == 'variados') varcategoria = 'v';
   if (categoria.value == 'hogar') varcategoria = 'g';
+
 
 
   const formData = new FormData();
