@@ -7,6 +7,9 @@ function mostrarPlatos(bebidas) {
 
   // Recorre la lista de bebidas y crea un elemento para cada una
   bebidas.forEach((plato) => {
+
+    if(plato.tipo == 'v'){
+      
     const platoElement = document.createElement("div");
     platoElement.classList.add("plato");
 
@@ -22,7 +25,7 @@ function mostrarPlatos(bebidas) {
 
     // Agrega el elemento al contenedor
     platosContainer.appendChild(platoElement);
-  });
+  }});
 }
 
 // Función para obtener las bebidas desde el servidor

@@ -46,17 +46,17 @@ app.get('/bebidas', (req, res) => {
 
 // Ruta para agregar una nueva bebida
 app.post('/bebidas', (req, res) => {
-  const { nombre, preciocup, preciomlc, preciousd, info, imagen } = req.body; // Obtener los datos del cuerpo de la solicitud
+  const { nombre, preciocup, preciomlc, preciousd, info, imagen, varcategoria } = req.body; // Obtener los datos del cuerpo de la solicitud
 
   // Validar que todos los campos estén presentes
-  if (!nombre || !preciousd || !preciomlc || !preciocup || !info ) {
+  if (!nombre || !preciousd || !preciomlc || !preciocup || !info || !varcategoria ) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
   }
 
-  const query = 'INSERT INTO bebidas (nombre, preciocup, preciomlc, preciousd, info, imagen) VALUES (?, ? , ? , ? , ?, ?)'; // Consulta para insertar una nueva bebida
+  const query = 'INSERT INTO bebidas (nombre, preciocup, preciomlc, preciousd, info, imagen, tipo) VALUES (?, ? , ? , ? , ?, ?)'; // Consulta para insertar una nueva bebida
 
   // Usar el pool para ejecutar la consulta
-  pool.query(query, [nombre, preciocup, preciomlc, preciousd, info, imagen], (err, results) => {
+  pool.query(query, [nombre, preciocup, preciomlc, preciousd, info, imagen, varcategoria], (err, results) => {
     if (err) {
       console.error('Error al agregar la bebida:', err.stack);
       return res.status(500).json({ error: 'Error en el servidor' });

@@ -10,13 +10,24 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   const preciousd = document.getElementById('preciousd').value;
   const info = document.getElementById('info').value;
   const fileInput = document.getElementById('imageInput');
+  const categoria = document.getElementById('categoria');
   const file = fileInput.files[0];
 
-  if (!nombre || !preciousd || !preciomlc || !preciocup || !info || !file) {
+  if (!nombre || !preciousd || !preciomlc || !preciocup || !info || !file || !categoria) {
       alert('Por favor, completa todos los campos.');
       document.getElementById('loading').style.display = 'none'; // Ocultar spinner si hay error
       return;
   }
+
+
+  var varcategoria;
+
+  if (categoria.value == 'hombre') varcategoria = 'h';
+  if (categoria.value == 'mujer') varcategoria = 'm';
+  if (categoria.value == 'niñ@') varcategoria = 'n';
+  if (categoria.value == 'variado') varcategoria = 'v';
+  if (categoria.value == 'hogar') varcategoria = 'g';
+
 
   const formData = new FormData();
   formData.append('image', file);
@@ -43,6 +54,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
           preciousd: parseFloat(preciousd),
           info,
           imagen: imageUrl,
+          varcategoria,
       };
 
       const saveResponse = await fetch('/bebidas', {

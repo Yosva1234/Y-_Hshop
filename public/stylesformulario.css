@@ -8,6 +8,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border-radius: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 /* Contenedor del formulario */
@@ -34,7 +43,8 @@ body {
 }
 
 .form-group label {
-  display: block;
+
+  display:inline;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }

@@ -31,15 +31,25 @@
       <input type="number" id="preciousd" name="preciousd" step="0.01" required>
     </div>
 
+    <!-- Nuevo campo de selección -->
+    <div class="form-group">
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="variados">variados</option>
+        <option value="hombre">hombre</option>
+        <option value="mujer">mujer</option>
+        <option value="niñ@">niñ@</option>
+      </select>
+    </div>
+
     <div class="form-group">
       <label for="informacion">Información:</label>
       <textarea id="info" name="info" rows="4" required></textarea>
     </div>
 
     <div class="form-group">
-      <label for="imageInput" class="custom-file-upload">
-        Seleccionar imagen
-      </label>
+     
       <input type="file" id="imageInput" accept="image/*" required>
     </div>
 
