@@ -72,9 +72,9 @@ header {
 
 /* Estilos para los enlaces */
 .categorias a {
-  color: white; /* Color del texto */
+  color: rgb(255, 4, 230); /* Color del texto */
   text-decoration: none; /* Quita el subrayado de los enlaces */
-  padding: 10px 20px; /* Espaciado interno (arriba/abajo y izquierda/derecha) */
+  padding: 5px; /* Espaciado interno (arriba/abajo y izquierda/derecha) */
   margin: 0 5px; /* Espaciado entre los enlaces */
   border-radius: 5px; /* Bordes redondeados */
   transition: background-color 0.3s; /* Transición suave para el efecto hover */
