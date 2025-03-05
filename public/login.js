@@ -2,8 +2,8 @@ document.getElementById('login-form').addEventListener('submit', function (event
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
   
     // Valores asignados (puedes cambiarlos)
-    const usuarioCorrecto = "yosvany";
-    const contraseñaCorrecta = "1234";
+    const usuarioCorrecto = "moralesyice";
+    const contraseñaCorrecta = "Morales,.96";
   
     // Obtener los valores ingresados por el usuario
     const username = document.getElementById('username').value;
